@@ -10,12 +10,9 @@ def about(request):
     return render(request,"ecommerce/about.html")
 
 def contact(request):
-   
-    return render(request,"ecommerce/contact.html")
+   return render(request,"ecommerce/contact.html")
 
 def collection(request):
-   
-    
-    return render(request,"ecommerce/collection.html",)
+   return render(request,"ecommerce/collection.html",)
 
 
