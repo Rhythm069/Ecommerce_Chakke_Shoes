@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chakke_Shoes</title>
+    <link rel="stylesheet" href="{% static 'styles/contact.css' %}">
+</head>
+<body>
+   <main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">We Reply From the Workshop</span>
+      <h1>Get in Touch</h1>
+      <p class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span>Contact</p>
+    </div>
+  </section>
+ 
+  <section class="section">
+    <div class="container contact-layout">
+ 
+      <div class="contact-info">
+        <h2>Talk to the bench, not a call center.</h2>
+        <p>Sizing questions, resole requests, or just curious about a pattern — someone who actually cuts leather will answer.</p>
+ 
+        <div class="info-block">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <h4>Workshop &amp; Showroom</h4>
+            <p>Rua do Almada 214, 4050-037 Porto, Portugal</p>
+          </div>
+        </div>
+ 
+        <div class="info-block">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c0 8 7 15 15 15l3-4-6-3-2 2c-2-1-4-3-5-5l2-2-3-6-4 3Z"/></svg>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+351220123456">+351 220 123 456</a> — Mon–Fri, 9am–6pm WET</p>
+          </div>
+        </div>
+ 
+        <div class="info-block">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:bench@lastandco.com">bench@lastandco.com</a> — replies within 1 business day</p>
+          </div>
+        </div>
+ 
+        <div class="info-block">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <div>
+            <h4>Showroom Hours</h4>
+            <p>Tuesday – Saturday, 10am – 6pm. Fittings by appointment.</p>
+          </div>
+        </div>
+ 
+        <div class="map-plate">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="top:38%; left:44%;"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg>
+          <span>Rua do Almada 214 — Workshop &amp; Showroom</span>
+        </div>
+      </div>
+ 
+      <div class="contact-form">
+        <span class="eyebrow">Send a Note</span>
+        <h2 style="font-size:1.5rem; margin:0.6rem 0 1.6rem;">We'll get back to you personally.</h2>
+ 
+        <form data-demo-form>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" required>
+            </div>
+            <div class="form-field">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" required>
+            </div>
+          </div>
+ 
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+          </div>
+ 
+          <div class="form-field">
+            <label for="topic">What's this about?</label>
+            <select id="topic" name="topic">
+              <option>General question</option>
+              <option>Sizing help</option>
+              <option>Resole service</option>
+              <option>Order status</option>
+              <option>Press &amp; wholesale</option>
+            </select>
+          </div>
+ 
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Tell us what you're after..."></textarea>
+          </div>
+ 
+          <button type="submit" class="btn btn--primary btn--block">Send Message</button>
+          <p class="form-note">By sending this, you agree to be contacted by the workshop about your note. No spam, no lists sold — just us.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- FAQ -->
+  <section class="section--tight">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Before You Write In</span>
+          <h2>Common Questions</h2>
+        </div>
+      </div>
+ 
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>How long does a made-to-order pair take?</summary>
+          <p>Standard sizes ship in 5–7 business days. Anything outside our stocked size run is cut to order and takes 3–4 weeks on the bench.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you offer resoling on shoes bought elsewhere?</summary>
+          <p>We resole LAST &amp; CO pairs for free within the first 12 months, and at a flat rate after that. We don't currently resole other brands' shoes — the welt construction varies too much to guarantee the fit.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I visit the workshop without an appointment?</summary>
+          <p>The showroom floor is open Tuesday–Saturday, 10am–6pm, no appointment needed. Fittings with a maker do need a booking, since only one or two people are free from the bench at a time.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What's your return policy?</summary>
+          <p>Unworn pairs in original packaging can be returned within 30 days. Made-to-order sizes are final sale, since they're cut specifically for you.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+ 
+
+</body>
+</html>
+{% endblock %}
