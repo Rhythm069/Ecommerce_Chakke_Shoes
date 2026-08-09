@@ -1,0 +1,56 @@
+.page-hero{ padding: clamp(3rem, 7vw, 4.5rem) 0 clamp(2rem, 5vw, 3rem); border-bottom: 1px solid var(--line); }
+.page-hero h1{ font-size: clamp(2.2rem, 5vw, 3.4rem); margin-top: 0.8rem; max-width: 18ch; }
+.breadcrumb{ font-family: var(--f-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); margin-top: 1.4rem; }
+.breadcrumb a:hover{ color: var(--oxblood); }
+.breadcrumb .sep{ margin: 0 0.5rem; }
+
+
+.collection-layout{ display: grid; grid-template-columns: 240px 1fr; gap: clamp(2rem, 4vw, 3.5rem); align-items: start; }
+.filters{ position: sticky; top: 100px; border: 1px solid var(--line); background: var(--paper); padding: 1.6rem; border-radius: var(--radius); }
+.filters h3{ font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 1rem; }
+.filter-group{ margin-bottom: 1.8rem; }
+.filter-group:last-child{ margin-bottom: 0; }
+.filter-option{ display: flex; align-items: center; gap: 0.6rem; padding: 0.4rem 0; font-size: 0.92rem; cursor: pointer; }
+.filter-option input{ accent-color: var(--oxblood); }
+.filter-option .count{ margin-left: auto; font-family: var(--f-mono); font-size: 0.72rem; color: var(--ink-soft); }
+.size-grid{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; }
+.size-grid button{
+  border: 1px solid var(--line); background: var(--bone); padding: 0.5rem 0;
+  font-family: var(--f-mono); font-size: 0.78rem; border-radius: var(--radius);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.size-grid button:hover, .size-grid button.active{ border-color: var(--oxblood); background: var(--oxblood); color: var(--paper); }
+
+.collection-toolbar{
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.8rem;
+  padding-bottom: 1.2rem; border-bottom: 1px solid var(--line); font-family: var(--f-mono);
+  font-size: 0.78rem; color: var(--ink-soft); flex-wrap: wrap; gap: 1rem;
+}
+.collection-toolbar select{ border: 1px solid var(--line); background: var(--bone); padding: 0.5rem 0.9rem; font-family: var(--f-mono); font-size: 0.78rem; border-radius: var(--radius); }
+
+.bento{ display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.5rem; }
+.bento .card-blueprint.size-lg{ grid-column: span 3; grid-row: span 2; }
+.bento .card-blueprint.size-md{ grid-column: span 3; }
+.bento .card-blueprint.size-sm{ grid-column: span 2; }
+
+.card-blueprint{
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1.3rem; display: flex; flex-direction: column; position: relative;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-blueprint:hover{ border-color: var(--oxblood); transform: translateY(-4px); box-shadow: 0 14px 28px -18px rgba(27,23,18,0.35); }
+.card-top{
+  display: flex; justify-content: space-between; align-items: flex-start; font-family: var(--f-mono);
+  font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.5rem;
+}
+.card-top .sku{ border: 1px dashed var(--line); padding: 0.2rem 0.5rem; }
+.card-badge{ background: var(--oxblood); color: var(--paper); padding: 0.2rem 0.5rem; border-radius: var(--radius); }
+.card-art{ flex: 1; display: flex; align-items: center; justify-content: center; padding: 1.2rem 0.5rem; }
+.card-art svg{ width: 100%; height: auto; max-height: 150px; }
+.size-lg .card-art svg{ max-height: 230px; }
+.card-blueprint h3{ font-size: 1.15rem; margin-bottom: 0.3rem; }
+.card-meta{ display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.6rem; padding-top: 0.9rem; border-top: 1px solid var(--line); }
+.card-meta .price{ font-family: var(--f-mono); font-weight: 700; color: var(--oxblood); font-size: 1rem; }
+.card-meta .cat{ font-family: var(--f-mono); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+.card-swatches{ display: flex; gap: 0.4rem; margin-top: 0.7rem; }
+.card-swatches span{ width: 14px; height: 14px; border-radius: 50%; border: 1px solid var(--line); display: inline-block; }
