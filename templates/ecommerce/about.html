@@ -16,7 +16,7 @@
     <div class="container">
       <span class="eyebrow">Since 2014</span>
       <h1>One bench. One last.<br>Twelve years of the same habit.</h1>
-      <p class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span>About</p>
+      <p class="breadcrumb"><a href={% url 'ecommerce:home'%}>Home</a><span class="sep">/</span>About</p>
     </div>
   </section>
  
@@ -24,11 +24,7 @@
   <section class="section">
     <div class="container split">
       <div class="split-art">
-        <svg viewBox="0 0 240 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M18,100 C14,88 20,76 34,70 C46,65 54,58 60,48 C68,36 82,26 100,25 L145,24 C168,24 188,32 198,48 C207,62 210,76 206,90 C204,98 198,104 190,105 L36,106 C26,106 20,105 18,100 Z" stroke="#7A2E30" stroke-width="2.4"/>
-          <path d="M18,100 C40,108 160,110 206,90" stroke="#AD8A46" stroke-width="1.6" stroke-dasharray="3 4"/>
-          <path d="M95,40 L118,28 M100,50 L123,38 M105,60 L128,48" stroke="#7A2E30" stroke-width="2" stroke-linecap="round"/>
-        </svg>
+        
       </div>
       <div class="split-copy">
         <span class="eyebrow">Where It Started</span>
@@ -88,17 +84,16 @@
  
       <div class="values-grid">
         <div class="value-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8c0-3 3-5 8-5s8 2 8 5-3 9-8 9-8-6-8-9Z"/><path d="M9 8c1 2 5 2 6 0"/></svg>
-          <h3>Full-grain only</h3>
+         
           <p>No corrected-grain, no bonded leather. If a hide has a natural mark, we pattern around it rather than sand it away.</p>
         </div>
         <div class="value-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12c3-4 6 4 9 0s6-4 9 0" stroke-dasharray="1 3.4"/><circle cx="19" cy="6" r="2"/></svg>
+          
           <h3>Hand-stitched, always</h3>
           <p>Machines close some seams elsewhere in the industry. On our benches, a needle and waxed thread still do that job.</p>
         </div>
         <div class="value-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20 14 10"/><path d="M13 4l7 7-3 3-7-7Z"/><circle cx="6" cy="18" r="2"/></svg>
+          
           <h3>Built to be resoled</h3>
           <p>A Goodyear welt means the sole can be replaced two, three, four times without touching the upper. Most shoes can't say that.</p>
         </div>
@@ -123,7 +118,7 @@
     <div class="container" style="text-align:center;">
       <span class="eyebrow" style="justify-content:center;">See the Current Run</span>
       <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem); margin:1rem auto 1.8rem; max-width:24ch;">Thirty-two patterns, all built the same slow way.</h2>
-      <a href="collection.html" class="btn btn--primary btn--arrow">Shop the Collection</a>
+      <a href="{% url 'ecommerce:collection'%}" class="btn btn--primary btn--arrow">Shop the Collection</a>
     </div>
   </section>
 </main>

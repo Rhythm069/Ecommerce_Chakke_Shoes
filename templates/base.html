@@ -10,7 +10,7 @@
 <body>
     
   <div class="header-inner">
-    <a href="index.html" class="brand">
+    <a href="{% url 'ecommerce:home'%}"class="brand">
       
       <span>Chakke_Shoes<small>Footwear House Est. 2014</small></span>
     </a>
@@ -28,7 +28,7 @@
       <button class="icon-btn" aria-label="Search">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>
       </button>
-      <a href="collection.html" class="icon-btn" aria-label="Cart, 2 items">
+      <a href="{% url 'ecommerce:collection'%}" class="icon-btn" aria-label="Cart, 2 items">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-13z"/><path d="M6 6 4 3H2"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
         <span class="cart-count">2</span>
       </a>
@@ -44,7 +44,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="brand">
+        <a href="{% url 'ecommerce:home'%}" class="brand">
           
           <span>Chakke_Shoes</span>
         </a>
@@ -59,30 +59,30 @@
       <div class="footer-col">
         <h4>Shop</h4>
         <ul>
-          <li><a href="collection.html">All Footwear</a></li>
-          <li><a href="collection.html">Sneakers</a></li>
-          <li><a href="collection.html">Boots</a></li>
-          <li><a href="collection.html">Derbies</a></li>
+          <li><a href="{% url 'ecommerce:collection'%}">All Footwear</a></li>
+          <li><a href="{% url 'ecommerce:collection'%}">Sneakers</a></li>
+          <li><a href="{% url 'ecommerce:collection'%}">Boots</a></li>
+          <li><a href="{% url 'ecommerce:collection'%}">Derbies</a></li>
         </ul>
       </div>
  
       <div class="footer-col">
         <h4>Studio</h4>
         <ul>
-          <li><a href="about.html">Our Craft</a></li>
-          <li><a href="about.html">Materials</a></li>
-          <li><a href="contact.html">Visit the Bench</a></li>
-          <li><a href="contact.html">Careers</a></li>
+          <li><a href="{% url 'ecommerce:about'%}">Our Craft</a></li>
+          <li><a href="{% url 'ecommerce:about'%}">Materials</a></li>
+          <li><a href="{% url 'ecommerce:contact'%}">Visit the Bench</a></li>
+          <li><a href="{% url 'ecommerce:contact'%}">Careers</a></li>
         </ul>
       </div>
  
       <div class="footer-col">
         <h4>Support</h4>
         <ul>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="contact.html">Sizing Guide</a></li>
-          <li><a href="contact.html">Resole Service</a></li>
-          <li><a href="contact.html">Shipping &amp; Returns</a></li>
+          <li><a href="{% url 'ecommerce:contact'%}">Contact Us</a></li>
+          <li><a href="{% url 'ecommerce:contact'%}">Sizing Guide</a></li>
+          <li><a href="{% url 'ecommerce:contact'%}">Resole Service</a></li>
+          <li><a href="{% url 'ecommerce:contact'%}">Shipping &amp; Returns</a></li>
         </ul>
       </div>
     </div>

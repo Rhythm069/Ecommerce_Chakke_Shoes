@@ -24,8 +24,8 @@
         <h1>Built <em>on the</em><br>last, not the line.</h1>
         <p>Every pair starts as a hand-carved wooden last, the same method shoemakers have used for two hundred years. We just refuse to rush it.</p>
         <div class="hero-ctas">
-          <a href="collection.html" class="btn btn--primary btn--arrow">Shop the Collection</a>
-          <a href="about.html" class="btn btn--outline">The Craft</a>
+          <a href="{% url 'ecommerce:collection'%}" class="btn btn--primary btn--arrow">Shop the Collection</a>
+          <a href="{% url 'ecommerce:about'%}" class="btn btn--outline">The Craft</a>
         </div>
         <div class="hero-stats">
           <div><strong>212</strong><span>Hand Finishes / Pair</span></div>
@@ -61,7 +61,7 @@
           <span class="eyebrow">Current Run</span>
           <h2>Four patterns, cut this season.</h2>
         </div>
-        <a href="collection.html" class="btn btn--outline btn--arrow">View Full Collection</a>
+        <a href="{% url 'ecommerce:collection'%}" class="btn btn--outline btn--arrow">View Full Collection</a>
       </div>
  
       <div class="grid-featured">

@@ -1,6 +1,7 @@
 
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Product,Category
 
 def home(request):
     
@@ -13,6 +14,8 @@ def contact(request):
    return render(request,"ecommerce/contact.html")
 
 def collection(request):
-   return render(request,"ecommerce/collection.html",)
+    products = Product.objects.all()
+    categories = Category.objects.all()
+    return render(request,"ecommerce/collection.html",{"products":products,"categories":categories})
 
 
