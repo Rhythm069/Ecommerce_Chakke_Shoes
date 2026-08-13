@@ -31,7 +31,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
           <div>
             <h4>Workshop &amp; Showroom</h4>
-            <p>Rua do Almada 214, 4050-037 Porto, Portugal</p>
+            <p>Kathmandu,Boudha,06</p>
           </div>
         </div>
  
@@ -39,7 +39,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c0 8 7 15 15 15l3-4-6-3-2 2c-2-1-4-3-5-5l2-2-3-6-4 3Z"/></svg>
           <div>
             <h4>Phone</h4>
-            <p><a href="tel:+351220123456">+351 220 123 456</a> — Mon–Fri, 9am–6pm WET</p>
+            <p><a href="tel:+977">9762300156</a> — Mon–Fri, 9am–6pm </p>
           </div>
         </div>
  
@@ -47,7 +47,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
           <div>
             <h4>Email</h4>
-            <p><a href="mailto:bench@lastandco.com">bench@lastandco.com</a> — replies within 1 business day</p>
+            <p><a href="mailto:bench@lastandco.com">chakkeshoesgmail.com</a> — replies within 1 business day</p>
           </div>
         </div>
  
@@ -55,13 +55,13 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
           <div>
             <h4>Showroom Hours</h4>
-            <p>Tuesday – Saturday, 10am – 6pm. Fittings by appointment.</p>
+            <p>Tuesday – Saturday, 10am – 6pm. /p>
           </div>
         </div>
  
         <div class="map-plate">
-          <svg viewBox="0 0 24 24" fill="currentColor" style="top:38%; left:44%;"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg>
-          <span>Rua do Almada 214 — Workshop &amp; Showroom</span>
+          <svg viewBox="0 0 24 24" fill="currentColor" style="top:38%; left:44%;"></svg>
+          <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed?bbox=85.36023169755937%2C27.719985590766072%2C85.36228358745575%2C27.72146956549106&amp;layer=mapnik" style="border: 1px solid black"></iframe>
         </div>
       </div>
  
@@ -69,48 +69,167 @@
         <span class="eyebrow">Send a Note</span>
         <h2 style="font-size:1.5rem; margin:0.6rem 0 1.6rem;">We'll get back to you personally.</h2>
  
-        <form data-demo-form>
-          <div class="form-row">
-            <div class="form-field">
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="fname" required>
-            </div>
-            <div class="form-field">
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lname" required>
-            </div>
-          </div>
- 
-          <div class="form-row">
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-field">
-              <label for="phone">Phone (optional)</label>
-              <input type="tel" id="phone" name="phone">
-            </div>
-          </div>
- 
-          <div class="form-field">
-            <label for="topic">What's this about?</label>
-            <select id="topic" name="topic">
-              <option>General question</option>
-              <option>Sizing help</option>
-              <option>Resole service</option>
-              <option>Order status</option>
-              <option>Press &amp; wholesale</option>
-            </select>
-          </div>
- 
-          <div class="form-field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required placeholder="Tell us what you're after..."></textarea>
-          </div>
- 
-          <button type="submit" class="btn btn--primary btn--block">Send Message</button>
-          <p class="form-note">By sending this, you agree to be contacted by the workshop about your note. No spam, no lists sold — just us.</p>
-        </form>
+        <form method="POST">
+
+    {% csrf_token %}
+
+    <div class="form-row">
+
+        <div class="form-field">
+
+            <label for="fname">
+                First Name
+            </label>
+
+            <input
+                type="text"
+                id="fname"
+                name="f_name"
+                maxlength="100"
+                value="{{ form.f_name.value|default:'' }}"
+                required
+            >
+
+            {% if form.f_name.errors %}
+                {{ form.f_name.errors }}
+            {% endif %}
+
+        </div>
+
+
+        <div class="form-field">
+
+            <label for="lname">
+                Last Name
+            </label>
+
+            <input
+                type="text"
+                id="lname"
+                name="l_name"
+                maxlength="100"
+                value="{{ form.l_name.value|default:'' }}"
+                required
+            >
+
+            {% if form.l_name.errors %}
+                {{ form.l_name.errors }}
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+    <div class="form-row">
+
+        <div class="form-field">
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                value="{{ form.email.value|default:'' }}"
+                required
+            >
+
+            {% if form.email.errors %}
+                {{ form.email.errors }}
+            {% endif %}
+
+        </div>
+
+
+        <div class="form-field">
+
+            <label for="phone">
+                Phone (optional)
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                maxlength="10"
+                value="{{ form.phone.value|default:'' }}"
+            >
+
+            {% if form.phone.errors %}
+                {{ form.phone.errors }}
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+    <div class="form-field">
+
+        <label for="topic">
+            What's this about?
+        </label>
+
+        <select id="topic" name="question">
+
+            {% for value, label in form.question.field.choices %}
+
+                <option
+                    value="{{ value }}"
+                     {% if form.question.value == value %}selected{% endif %}
+                   
+                >
+                    {{ label }}
+                </option>
+
+            {% endfor %}
+
+        </select>
+
+        {% if form.question.errors %}
+            {{ form.question.errors }}
+        {% endif %}
+
+    </div>
+
+
+    <div class="form-field">
+
+        <label for="message">
+            Message
+        </label>
+
+        <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="Tell us what you're after..."
+        >{{ form.message.value|default:'' }}</textarea>
+
+        {% if form.message.errors %}
+            {{ form.message.errors }}
+        {% endif %}
+
+    </div>
+
+
+    <button
+        type="submit"
+        class="btn btn--primary btn--block"
+    >
+        Send Message
+    </button>
+
+
+    <p class="form-note">
+        By sending this, you agree to be contacted by the workshop
+        about your note. No spam, no lists sold — just us.
+    </p>
+
+</form>
       </div>
     </div>
   </section>
