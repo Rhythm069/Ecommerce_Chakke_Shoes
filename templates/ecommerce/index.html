@@ -17,28 +17,78 @@
 <main>
  
   
-  <section class="hero">
+ <section class="hero">
+
     <div class="container hero-inner">
-      <div class="hero-copy">
-        <span class="eyebrow">No. 014 — Winter Collection</span>
-        <h1>Built <em>on the</em><br>last, not the line.</h1>
-        <p>Every pair starts as a hand-carved wooden last, the same method shoemakers have used for two hundred years. We just refuse to rush it.</p>
-        <div class="hero-ctas">
-          <a href="{% url 'ecommerce:collection'%}" class="btn btn--primary btn--arrow">Shop the Collection</a>
-          <a href="{% url 'ecommerce:about'%}" class="btn btn--outline">The Craft</a>
+
+        <div class="hero-copy">
+
+            <span class="eyebrow">
+                No. 014 — Winter Collection
+            </span>
+
+            <h1>
+                Built <em>on the</em><br>
+                last, not the line.
+            </h1>
+
+            <p>
+                Every pair starts as a hand-carved wooden last,
+                the same method shoemakers have used for two hundred years.
+                We just refuse to rush it.
+            </p>
+
+            <div class="hero-ctas">
+
+                <a href="{% url 'ecommerce:collection' %}"
+                   class="btn btn--primary btn--arrow">
+                    Shop the Collection
+                </a>
+
+                <a href="{% url 'ecommerce:about' %}"
+                   class="btn btn--outline">
+                    The Craft
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>212</strong>
+                    <span>Hand Finishes / Pair</span>
+                </div>
+
+                <div>
+                    <strong>38hr</strong>
+                    <span>Average Build Time</span>
+                </div>
+
+                <div>
+                    <strong>4.9</strong>
+                    <span>Rated by 6,200 Owners</span>
+                </div>
+
+            </div>
+
         </div>
-        <div class="hero-stats">
-          <div><strong>212</strong><span>Hand Finishes / Pair</span></div>
-          <div><strong>38hr</strong><span>Average Build Time</span></div>
-          <div><strong>4.9</strong><span>Rated by 6,200 Owners</span></div>
+
+
+        <div class="hero-art">
+
+            {% if hero and hero.image %}
+
+                <img
+                    src="{{ hero.image.url }}"
+                    alt="Hero Banner"
+                >
+
+            {% endif %}
+
         </div>
-      </div>
- 
-      <div class="hero-art">
-        
+
     </div>
-  </section>
- 
+
   
   <div class="strip">
     <div class="strip-track">
