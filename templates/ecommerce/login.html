@@ -47,26 +47,84 @@
         <h1>Welcome back.</h1>
         <p>Good to see you on the bench again.</p>
 
-        <form data-demo-form>
-          <div class="form-field">
-            <label for="login-email">Email</label>
-            <input type="email" id="login-email" name="email" placeholder="you@email.com" required>
-          </div>
-          <div class="form-field">
-            <label for="login-password">Password</label>
-            <input type="password" id="login-password" name="password" placeholder="••••••••" required>
-          </div>
+        <form method="POST">
 
-          <div class="form-meta-row">
-            <label class="check-row"><input type="checkbox" name="remember"> Remember me</label>
-            <a href="#">Forgot password?</a>
-          </div>
+    {% csrf_token %}
 
-          <button type="submit" class="btn btn--primary btn--block">Sign In</button>
-        </form>
+    <div class="form-field">
 
-        <div class="auth-divider">or</div>
-        <p class="auth-switch">New to the workshop? <a href="register.html">Create an account</a></p>
+        <label for="{{ Form.username.id_for_label }}">
+            Username
+        </label>
+
+        {{ Form.username }}
+
+        {% if Form.username.errors %}
+            {{ Form.username.errors }}
+        {% endif %}
+
+    </div>
+
+
+    <div class="form-field">
+
+        <label for="{{ Form.password.id_for_label }}">
+            Password
+        </label>
+
+        {{ Form.password }}
+
+        {% if Form.password.errors %}
+            {{ Form.password.errors }}
+        {% endif %}
+
+    </div>
+
+
+    <div class="form-meta-row">
+
+        <label class="check-row">
+
+            {{ Form.signin }}
+
+            Remember me
+
+        </label>
+
+        <a href="#">
+            Forgot password?
+        </a>
+
+    </div>
+
+
+    <button
+        type="submit"
+        class="btn btn--primary btn--block">
+        Sign In
+    </button>
+
+</form>
+
+
+{% if error %}
+    <p style="margin-top:14px; color:var(--maroon);">
+        {{ error }}
+    </p>
+{% endif %}
+
+
+<div class="auth-divider">
+    or
+</div>
+
+<p class="auth-switch">
+    New to the workshop?
+
+    
+        Create an account
+    </a>
+</p>
       </div>
     </section>
 
