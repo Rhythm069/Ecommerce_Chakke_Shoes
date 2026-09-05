@@ -4,7 +4,8 @@ from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from .models import Product,Category,Hero
 from django.contrib.auth.decorators import login_required
-from .forms import ContactForm,LoginForm
+from .forms import ContactForm,LoginForm,RegisterForm   
+
 
 
 def home(request):
@@ -81,6 +82,21 @@ def login(request):
 
 
 def registers(request):
+    form = RegisterForm()
+    if request.method == "POST":
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get("username")
+            email = form.cleaned_data.get("email")
+            password = form.cleaned_data.get("password")
+            confirm_password = form.cleaned_data.get("confirm_password")
+
+            if password != confirm_password:
+                form.add_error("confirm_password", "Passwords do not match.")
+            else:
+                user = User.objects.create_user(username=username, email=email, password=password)
+                user.save()
+            
     return render(request,"ecommerce/registers.html")
 
 @login_required
