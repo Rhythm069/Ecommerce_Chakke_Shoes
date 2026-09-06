@@ -97,7 +97,7 @@ def registers(request):
                 user = User.objects.create_user(username=username, email=email, password=password)
                 user.save()
             
-    return render(request,"ecommerce/registers.html")
+    return render(request,"ecommerce/registers.html",{"Form":RegisterForm()})
 
 @login_required
 def cart (request):

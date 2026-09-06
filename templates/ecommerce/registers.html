@@ -54,23 +54,48 @@
             <div class="form-field">
               <label for="{{ Form.username.id_for_label }}">Username</label>
               {{ Form.username }}
+              {% if Form.username.errors %}
+            {{ Form.username.errors }}
+        {% endif %}
             </div>
+            
+
            
 
           <div class="form-field">
-            <label for="reg-email">Email</label>
-            <input type="email" id="reg-email" name="email" placeholder="you@email.com" required>
+           <label for="{{ Form.email.id_for_label }}">Email</label>
+        {{ Form.email }}
+
+        {% if Form.email.errors %}
+          <div class="form-error">
+            {{ Form.email.errors }}
+          </div>
+        {% endif %}
           </div>
 
           <div class="form-field">
-            <label for="reg-password">Password</label>
-            <input type="password" id="reg-password" name="password" placeholder="At least 8 characters" required minlength="8">
+             <label for="{{ Form.password.id_for_label }}">Password</label>
+        {{ Form.password }}
+
+        {% if Form.password.errors %}
+          <div class="form-error">
+            {{ Form.password.errors }}
+          </div>
+        {% endif %}
           </div>
 
           <div class="form-field">
-            <label for="reg-confirm">Confirm Password</label>
-            <input type="password" id="reg-confirm" name="confirm" placeholder="••••••••" required minlength="8">
+            <label for="{{ Form.confirm_password.id_for_label }}">
+          Confirm Password
+        </label>
+
+        {{ Form.confirm_password }}
+
+        {% if Form.confirm_password.errors %}
+          <div class="form-error">
+            {{ Form.confirm_password.errors }}
           </div>
+        {% endif %}
 
           <label class="check-row check-row--terms">
             <input type="checkbox" name="terms" required>
